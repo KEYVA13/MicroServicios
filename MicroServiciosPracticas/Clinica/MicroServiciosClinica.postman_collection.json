@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "d4e7969c-20dc-4aee-9598-2e0a9dff5fc0",
+		"name": "MicroServiciosClinica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30894789"
+	},
+	"item": [
+		{
+			"name": "Crear Paciente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dni\" : \"12345678\",\r\n    \"nombre\" : \"kevin\",\r\n    \"apellido\" : \"gonzalez\",\r\n    \"fechaNac\" : \"2000-12-24\",\r\n    \"telefono\" : \"2494306177\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9001/pacientes/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"pacientes",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Traer Pacientes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"fecha\" : \"2024-06-15\",\r\n    \"descripcion\" : \"Tratamiento Salir A hacer deporte vago.\",\r\n    \"dni\" : \"12345678\" \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9002/pacientes/traer",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"pacientes",
+						"traer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear Turno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\" : \"2003-03-13\",\r\n    \"tratamiento\" : \"Entrenar\",\r\n    \"dni\" : \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9002/turnos/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"turnos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Traer Turnos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9002/turnos/traer",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"turnos",
+						"traer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traer por dni",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9001/pacientes/traerdni/44357234",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"pacientes",
+						"traerdni",
+						"44357234"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
